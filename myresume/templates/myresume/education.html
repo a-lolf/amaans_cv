@@ -1,0 +1,11 @@
+{% extends './base.html' %}
+
+{% block content %}
+  <h1>Education</h1>
+  {% for degree in education %}
+    <h2>{{ degree.institution_name }}</h2>
+    <p>{{ degree.degree }}</p>
+    <p>{{ degree.field_of_study }}</p>
+    <p>{{ degree.start_date }} - {{ degree.end_date }}</p>
+  {% endfor %}
+{% endblock %}

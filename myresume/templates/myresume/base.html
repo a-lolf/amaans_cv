@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Resume Website</title>
+  <link rel="stylesheet" href="{% static 'myresume/css/style.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'work' %}">Work Experience</a></li>
+        <li><a href="{% url 'education' %}">Education</a></li>
+        <li><a href="{% url 'skills' %}">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>
