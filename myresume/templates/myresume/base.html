@@ -3,17 +3,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Resume Website</title>
+  <title>Amaan Ansari - Software Developer</title>
   <link rel="stylesheet" href="{% static 'myresume/css/style.css' %}">
 </head>
+<script>
+    $(document).ready(function(){
+        $('a[href^="#"]').on('click',function (e) {
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+    });
+</script>
+
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'work' %}">Work Experience</a></li>
-        <li><a href="{% url 'education' %}">Education</a></li>
-        <li><a href="{% url 'skills' %}">Skills</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work-experience">Work Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>

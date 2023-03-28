@@ -5,6 +5,15 @@ header {
   text-align: center;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
