@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .models import WorkExperience, Education, Skill
 
@@ -22,3 +23,9 @@ def skills(request):
     skills = Skill.objects.all()
     context = {'skills': skills}
     return render(request, 'myresume/skills.html', context)
+
+def view_pdf(request):
+    with open('path/to/your/pdf/file.pdf', 'rb') as pdf:
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename="file.pdf"'
+        return response
