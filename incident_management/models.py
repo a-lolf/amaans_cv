@@ -18,7 +18,7 @@ class Incident(models.Model):
         ('Low', 'Low'),
     ]
 
-    incident_id = models.CharField(max_length=20, unique=True)
+    incident_id = models.CharField(primary_key=True, max_length=20, unique=True)
     reporter = models.ForeignKey(User, on_delete=models.CASCADE)
     details = models.TextField()
     reported_datetime = models.DateTimeField(auto_now_add=True)

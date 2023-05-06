@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework.exceptions import PermissionDenied
 from rest_framework.permissions import IsAuthenticated
 from .models import Incident
 from .serializers import IncidentSerializer
@@ -19,6 +20,11 @@ class IncidentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Incident.objects.all()
     serializer_class = IncidentSerializer
     permission_classes = [IsAuthenticated]
+
+    def perform_update(self, serializer):
+        if serializer.instance.incident_status == 'Closed':
+            raise PermissionDenied("Cannot update a closed incident.")
+        serializer.save()
 
     def get_object(self):
         obj = super().get_object()
