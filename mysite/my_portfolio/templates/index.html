@@ -603,10 +603,11 @@
         </div>
         <div class="choose animate-box">
             <h2>Contact</h2>
-            <form method="POST" action="/contact-me/">
+            <form id="ContactMeForm">
                 <div class="row form-group">
                     <div class="col-md-6">
-                        <input type="text" name="firstname" id="fname" class="form-control" placeholder="Your firstname">
+                        <input type="text" name="firstname" id="fname" class="form-control"
+                               placeholder="Your firstname">
                     </div>
                 </div>
                 <div class="row form-group">
@@ -617,13 +618,15 @@
 
                 <div class="row form-group">
                     <div class="col-md-12">
-                        <input type="text" name="email" id="email" class="form-control" placeholder="Your email address">
+                        <input type="text" name="email" id="email" class="form-control"
+                               placeholder="Your email address">
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <div class="col-md-12">
-                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Your subject of this message">
+                        <input type="text" name="subject" id="subject" class="form-control"
+                               placeholder="Your subject of this message">
                     </div>
                 </div>
 
@@ -636,7 +639,6 @@
                 <div class="form-group">
                     <input type="submit" value="Send Message" class="btn btn-primary">
                 </div>
-
             </form>
         </div>
     </div>
@@ -673,6 +675,8 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
     <script src="{% static 'js/google_map.js' %}"></script>
+    <!--Below script is for the send message button of the form-->
+    <script src="{% static 'js/contact_me_form.js' %}"></script>
 
     <!-- Main -->
     <script src="{% static 'js/main.js' %}"></script>
