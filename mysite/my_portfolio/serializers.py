@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Snippet
+from .models import ContactMe
 
 
 class ContactMeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Snippet
+        model = ContactMe
         fields = '__all__'
