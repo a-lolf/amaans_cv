@@ -7,9 +7,9 @@ ALLOWED_HOSTS += ['amaanansari.pythonanywhere.com', 'amaanans.pythonanywhere.com
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_portfolio',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
+        'NAME': 'amaanansari$portfolio',
+        'USER': 'amaanansari',
+        'PASSWORD': 'pAri$114',
+        'HOST': 'amaanansari.mysql.pythonanywhere-services.com',
     }
 }
