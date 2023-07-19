@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['amaanansari.pythonanywhere.com', 'amaanans.pythonanywhere.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
