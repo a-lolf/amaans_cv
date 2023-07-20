@@ -17,6 +17,9 @@ $(document).ready(function() {
         url: '/contact-me/', // Replace with your API endpoint URL
         data: JSON.stringify(formData),
         contentType: 'application/json',
+        headers: {
+          'X-API-Key': 'your_generated_api_key_here'
+        },
         success: function(response) {
           // Handle the API response if needed
           console.log(response);
