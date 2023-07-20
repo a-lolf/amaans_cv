@@ -126,4 +126,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-FORM_KEY = 'your_generated_api_key_here'
+FORM_KEY = 'earth'

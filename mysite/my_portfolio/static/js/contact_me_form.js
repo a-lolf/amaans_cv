@@ -18,7 +18,7 @@ $(document).ready(function() {
         data: JSON.stringify(formData),
         contentType: 'application/json',
         headers: {
-          'X-API-Key': 'your_generated_api_key_here'
+          'Planet': 'earth'
         },
         success: function(response) {
           // Handle the API response if needed

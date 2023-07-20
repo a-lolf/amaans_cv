@@ -13,7 +13,7 @@ def index(request):
 
 class FrontendAPIAccessPermission(BasePermission):
     def has_permission(self, request, view):
-        api_key = request.headers.get('X-API-Key')
+        api_key = request.headers.get('Planet')
         return api_key == FORM_KEY
 
 
