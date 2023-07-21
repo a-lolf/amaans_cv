@@ -1,6 +1,4 @@
 # Ignore debug and allowed_hosts settings
-mysite/mysite/settings.py:DEBUG
-mysite/mysite/settings.py:ALLOWED_HOSTS
 
 *.pyc
-db.sqlite3
+mysite/.idea

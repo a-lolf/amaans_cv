@@ -127,3 +127,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 FORM_KEY = 'earth'
+
+EMAIL_APP_PSK = 'rwsxcrxnonvqksfo'
+
+SENDER_EMAIL = "mr.ansariamaan@gmail.com"
