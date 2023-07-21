@@ -1,4 +1,7 @@
 # Ignore debug and allowed_hosts settings
 
 *.pyc
+*.xml
+*.iml
 mysite/.idea
+
