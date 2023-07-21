@@ -24,8 +24,7 @@ class ContactMeViewSet(viewsets.ModelViewSet):
     serializer_class = ContactMeSerializer
 
     def create(self, request, *args, **kwargs):
-        # send email before creating an instance
-        email_sender(request.data)
         response = super().create(request, *args, **kwargs)  # call the original create method
-        # do something after creating an instance
+        # send email after creating and validating an instance
+        email_sender(request.data)
         return response
