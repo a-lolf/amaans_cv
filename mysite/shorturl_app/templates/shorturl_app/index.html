@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="javascript.js"></script>
+</head>
+<body>
+    <header>
+    <h1>URL Shortener</h1>
+    </header>
+    <form method="post">
+        {% csrf_token %}
+        <label for="original_url">Enter the URL to shorten:</label>
+        <input type="url" name="original_url" placeholder="Enter your long URL" required>
+        <button type="submit">Shorten URL</button>
+    </form>
+    {% if short_url %}
+        <p>Short URL: <a href="{{ short_url.original_url }}">{{ short_url.short_code }}</a></p>
+    {% endif %}
+</body>
+
+<body>
+  <header>
+    <h1>URL Shortener</h1>
+  </header>
+  <main>
+    <form action="shorten.php" method="post">
+
+      <button type="submit">Shorten URL</button>
+    </form>
+    <p id="shortened_url"></p>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023</p>
+  </footer>
+</body>
+
+
+</html>

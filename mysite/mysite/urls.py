@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('my_portfolio.urls')),
+    path('shorten/', include('shorturl_app.urls')),
 ]
